@@ -17,9 +17,9 @@ documentation:
   author:       "Marco Antonio Vázquez Robles"
   title:        "Oscilador de anillo con programabilidad de retardo"
   language:     "Wokwi"
-  description:  ""      # Short description of what your project does
-
-# Longer description of how the project works. You can use standard markdown format.
+  description:  "Dos osciladores de anillo de 21 etapas, uno con capacidad de programabilidad de etapas; y un generador de fases sin traslape" 
+  
+# Longer description of how the project works. You can use standard markdown format
   how_it_works: |
       Explain how your project works
 
@@ -35,18 +35,16 @@ documentation:
     - A1
     - A2
     - A3
-    - IN_F
-    - IN_F'
+    - INF
+    - INF'
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+    - AF
+    - AF'
+    - BF
+    - BF'
+    - f
+    - f'
 
 # The following fields are optional
   tag:          ""      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,

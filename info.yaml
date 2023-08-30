@@ -21,12 +21,26 @@ documentation:
   
 # Longer description of how the project works. You can use standard markdown format
   how_it_works: |
-      Explain how your project works
+      El proyecto consta de 3 modulos con diferentes propositos; un oscilador de anillo programable, el oscilador de anillo de 21 etapas y un
+      generador de fases sin traslape. El oscilador de anillo programable tiene dos modulos: un decodificador 4 a 10, y un anillo de 21 compuertas
+      NOT que en las etapas impares tiene compuertas AND para conformar el lazo cerrado. Para su funcionamiento, se requiere ingresar una palabra
+      de 4 bits (A, B, C, D) que indicara la cantidad de retardos que se quieren utilizar en el oscilador; con esto, se mandara una señal especifica
+      a la compuerta AND pertinente para cerrar el lazo en esa etapa y mandar alta impedancia al resto de etapas, y solo hasta la etapa correspondiente
+      pueda oscilar. Su proposito es generar frecuencias discretas en función del número de etapas del anillo y su retardo intrinseco.
+      El oscilador de anillo de 21 etapas sencillo, solo funciona como una referencia de frecuencia, un generador perpetuo de una señal constante.
+      Ademas, se agrega un generador de fases sin traslape que se alimentara de las señales de salida del oscilador (F y F') y generara las señales
+      f y f'.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      Explain how to test your project
-
+      Primordialmente, para probar el oscilador de anillo programable, se requiere ingresar una palabra de 4 bits en las entradas pertinentes, teniendo
+      solo como posibles valores 2 (en binario) hasta 11. Por ejemplo, al ingresar un 2 ('0010') se activaran 3 etapas, al ingresar un 3 ('0011') se
+      activaran 5 etapas, y asi sucesivamente hasta que al ingresar 11 ('1011') podamos tener 21 etapas involucradas en la frecuencia de salida y su
+      inversa (F y F').
+      El oscilador de anillo simple, al no tener entrada, solo se requiere revisar si su frecuencia de salida y su inversa, son constantes.
+      El generador de fases se debe alimentar de las señales F y F' (que podemos extraer de la salida del oscilador de anillo simple) para determinar
+      que genere correctamente las señales f y f'.
+      
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
     - CLK

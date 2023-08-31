@@ -14,7 +14,7 @@ yaml_version: 4
 #
 # Here is a great example: https://github.com/davidsiaw/tt02-davidsiaw-stackcalc/blob/38c5647f83aad2aec675d566aa3d67b98f0aac81/info.yaml
 documentation: 
-  author:       "Marco Antonio Vázquez Robles"
+  author:       "Marco Antonio Vázquez Robles, Dr. Federico Sandoval"
   title:        "Oscilador de anillo con programabilidad de retardo"
   language:     "Wokwi"
   description:  "Dos osciladores de anillo de 21 etapas, uno con capacidad de programabilidad de etapas; y un generador de fases de reloj sin traslape" 
